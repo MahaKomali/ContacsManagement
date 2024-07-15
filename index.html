@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="images/image.png" alt="Contact Management" class="header-image">
+        <h1>Contact Management System</h1>
+        <button onclick="showAddContactForm()">Add New Contact</button>
+        
+        <div id="contact-form" class="form-container">
+            <div class="form-header">
+                <img src="images/contact.png" alt="Contact Icon" class="contact-icon">
+                <h2>Add / Edit Contact</h2>
+            </div>
+            <form id="contactForm">
+                <input type="hidden" id="contactId">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <button type="submit">Save</button>
+                <button type="button" onclick="hideContactForm()">Cancel</button>
+            </form>
+        </div>
+
+        <div id="contact-list" class="contact-list">
+            <h2>Contact List</h2>
+            <ul id="contacts"></ul>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
